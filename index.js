@@ -14,14 +14,12 @@ $(function() {
     $('.shopping-list').append(listSelection);
 
   });
-  $('.shopping-list').on("click", '.shopping-item-delete', function(event) {
+  //permanently remove items from the list
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
     $(this).closest('li').remove();
   });
+  //check and uncheck items on the list by clicking the "Check" button
   $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
-    $(this).closest('li').find('.shopping-item').toggleClass('.shopping-item__checked')
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')
   });
 });
-
-
-//check and uncheck items on the list by clicking the "Check" button
-//permanently remove items from the list
